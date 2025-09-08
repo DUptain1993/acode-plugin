@@ -32,6 +32,9 @@ let buildConfig = {
   logLevel: "info",
   color: true,
   outdir: "dist",
+  platform: 'node', // Specify the platform as 'node'
+  format: 'cjs', // CommonJS format for Node.js
+  target: 'es2020', // Target ES2020 for modern Node.js
   plugins: [zipPlugin],
 };
 
@@ -49,9 +52,10 @@ let buildConfig = {
       port: 3000,
     });
 
+    console.log(`Development server running at http://${host}:${port}`);
   } else {
     console.log("Building for production...");
     await esbuild.build(buildConfig);
     console.log("Production build complete.");
   }
-})();
+})().catch(() => process.exit(1));
