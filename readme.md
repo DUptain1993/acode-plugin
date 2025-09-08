@@ -1,21 +1,28 @@
-# Acode plugin
+# Android Build Tools Plugin for Acode
 
-Read acode plugin [documentation](https://docs.acode.app/docs/) to develop plugin for acode editor.
+This plugin integrates Android build tools with Acode, allowing you to run Gradle tasks and build Android projects directly from within Acode.
+
+## Features
+
+- Run Gradle tasks
+- Build Android projects
+- Support for Kotlin and Java
+
+## Installation
+
+1. Download the plugin zip file.
+2. Extract the contents to the Acode plugins directory.
+3. Restart Acode to load the plugin.
 
 ## Usage
 
-Use this for debug build:
+- Open Acode and navigate to the project directory.
+- Use the plugin commands to run Gradle tasks and build your project.
 
-```
-npm run dev
-```
+## Contributing
 
-and this for production build:
+Feel free to contribute to the development of this plugin. Pull requests are welcome!
 
-```
-npm run build
-```
+## License
 
-## How to parse/bundle scss file ?
-
-You'll need to install one sass esbuild plugin and then just add that in `esbuild.config.mjs` at line 34
+This plugin is licensed under the MIT License.
